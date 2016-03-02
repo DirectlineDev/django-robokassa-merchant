@@ -28,7 +28,7 @@ Requirements
 ------------
 
 * Python 2 & 3
-* Django 1.7+
+* Django 1.8+
 
 Installation
 ------------
