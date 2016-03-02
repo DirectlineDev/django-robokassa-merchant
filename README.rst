@@ -6,16 +6,16 @@ Django Robokassa Merchant
     :target: https://gitter.im/MrYoda/DirectlineDev?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 .. image:: https://badge.fury.io/gh/DirectlineDev%2Fdjango-robokassa-merchant.svg
-    :target: http://badge.fury.io/gh/DirectlineDev%2Fdjango-hitcounter
+    :target: http://badge.fury.io/gh/DirectlineDev%2Fdjango-robokassa-merchant
 
 .. image:: https://travis-ci.org/DirectlineDev/django-robokassa-merchant.svg?branch=master
-    :target: https://travis-ci.org/DirectlineDev/django-hitcounter
+    :target: https://travis-ci.org/DirectlineDev/django-robokassa-merchant
 
 .. image:: https://badge.fury.io/py/django-robokassa-merchant.svg
-    :target: http://badge.fury.io/py/djangohitcounter
+    :target: http://badge.fury.io/py/django-robokassa-merchant
 
 .. image:: https://coveralls.io/repos/DirectlineDev/django-robokassa-merchant/badge.svg?branch=master&service=github
-    :target: https://coveralls.io/github/DirectlineDev/django-hitcounter?branch=master
+    :target: https://coveralls.io/github/DirectlineDev/django-robokassa-merchant?branch=master
 
 
 
