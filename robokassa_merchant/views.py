@@ -7,11 +7,11 @@ from django.http.response import HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import View
 
-from . import options
-from .utils import now
-from .models import *
-from .forms import ResultURLForm, SuccessRedirectForm, FailRedirectForm
-from .signals import robokassa_result_received, robokassa_success_page_visited, robokassa_fail_page_visited
+from robokassa_merchant import options
+from robokassa_merchant.utils import now
+from robokassa_merchant.models import *
+from robokassa_merchant.forms import ResultURLForm, SuccessRedirectForm, FailRedirectForm
+from robokassa_merchant.signals import robokassa_result_received, robokassa_success_page_visited, robokassa_fail_page_visited
 
 
 class BaseRobokassaView(View):

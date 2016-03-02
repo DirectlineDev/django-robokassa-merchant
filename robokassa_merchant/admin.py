@@ -3,7 +3,7 @@
 from django.contrib import admin
 from django.core.urlresolvers import reverse
 from django.utils.safestring import mark_safe
-from .models import *
+from robokassa_merchant.models import *
 
 
 class InvoiceAdmin(admin.ModelAdmin):

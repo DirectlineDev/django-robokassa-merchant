@@ -5,8 +5,8 @@ from django.conf import settings
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 
-from . import options
-from .utils import now
+from robokassa_merchant import options
+from robokassa_merchant.utils import now
 
 __all__ = ['Invoice', 'Event', ]
 
