@@ -5,9 +5,9 @@ STATUS_CREATED = 0
 STATUS_SUCCESS = 1
 STATUS_FAIL = 2
 STATUS = (
-    (STATUS_CREATED, 'Created', {}),
-    (STATUS_SUCCESS, 'Success', {}),
-    (STATUS_FAIL, 'Fail', {}),
+    (STATUS_CREATED, 'Created'),
+    (STATUS_SUCCESS, 'Success'),
+    (STATUS_FAIL, 'Fail'),
 )
 
 # Статусы заказа в Robokassa todo проверять через XML-интерфейс

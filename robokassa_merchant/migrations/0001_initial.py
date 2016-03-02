@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 from django.conf import settings
-import libs.timezones
+from robokassa_merchant.utils import now
 
 
 class Migration(migrations.Migration):
@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
             name='Event',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('create_date', models.DateTimeField(default=libs.timezones.now, verbose_name='Время события')),
+                ('create_date', models.DateTimeField(default=now, verbose_name='Время события')),
                 ('status', models.PositiveSmallIntegerField(choices=[(0, 'Created'), (1, 'Success'), (2, 'Fail')], verbose_name='Тип события')),
                 ('message', models.CharField(null=True, max_length=255, verbose_name='Сообщение')),
             ],
@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('object_id', models.PositiveIntegerField(null=True, verbose_name='ID объекта приложения')),
-                ('create_date', models.DateTimeField(default=libs.timezones.now, verbose_name='Дата создания')),
+                ('create_date', models.DateTimeField(default=now, verbose_name='Дата создания')),
                 ('payment_date', models.DateTimeField(null=True, blank=True, verbose_name='Дата оплаты')),
                 ('total_price', models.DecimalField(decimal_places=2, max_digits=12, default=0, verbose_name='Итоговая сумма')),
                 ('current_status', models.PositiveSmallIntegerField(default=0, choices=[(0, 'Created'), (1, 'Success'), (2, 'Fail')], verbose_name='Текущий статус')),
@@ -50,6 +50,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='event',
             name='invoice',
-            field=models.ForeignKey(to='robokassa.Invoice', related_name='events', verbose_name='Счёт к оплате'),
+            field=models.ForeignKey(to='robokassa_merchant.Invoice', related_name='events', verbose_name='Счёт к оплате'),
         ),
     ]
