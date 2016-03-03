@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
 
 from hashlib import md5
-from urllib.parse import urlencode
+try:
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlencode
 from django import forms
+
+
+__all__ = ['BaseRobokassaForm', 'RobokassaForm', 'ResultURLForm', 'SuccessRedirectForm', 'FailRedirectForm']
 
 
 class BaseRobokassaForm(forms.Form):
@@ -106,7 +112,7 @@ class RobokassaForm(BaseRobokassaForm):
             if value is None:
                 return ''
             return value
-        standard_part = ':'.join([_val('MrchLogin'), _val('OutSum'), _val('InvId'), self.conf.PASSWORD1])
+        standard_part = ':'.join([_val('MrchLogin'), str(_val('OutSum')), str(_val('InvId')), self.conf.PASSWORD1])
         return self._append_extra_part(standard_part, _val).encode('utf-8')
 
 
