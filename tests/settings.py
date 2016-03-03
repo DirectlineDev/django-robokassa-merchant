@@ -36,5 +36,6 @@ ROBOKASSA_CONF = dict(
         ROBOKASSA_PASSWORD2='password2',
         ROBOKASSA_TEST_MODE=True,
         ROBOKASSA_USE_POST=True,
+        ROBOKASSA_STRICT_CHECK=True,
     ),
 )
