@@ -9,7 +9,7 @@ def readfile(file_path):
 
 setup(
     name='django-robokassa-merchant',
-    version='0.2',
+    version='0.3',
 
     author='Anton Kuzmichev',
     author_email='assargin@gmail.com',
